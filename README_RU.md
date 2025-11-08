@@ -11,6 +11,8 @@
 Если вам полезен этот проект, вы можете поддержать его донатом:  
 **USDT(TRC20): TWDDYD1nk5JnG6FxvEu2fyFqMCY9PcdEsJ**
 
+**https://boosty.to/petersolomon/donate**
+
 ## 🌟 Особенности скрипта автоматизированной установки на роутеры MikroTik
 
 В репозитории доступен **интерактивный скрипт автоматизированной установки** для **RouterOS MikroTik**,  
@@ -105,3 +107,5 @@ $s
 
 Если вам полезен этот проект, вы можете поддержать его донатом:  
 **USDT(TRC20): TWDDYD1nk5JnG6FxvEu2fyFqMCY9PcdEsJ**
+
+**https://boosty.to/petersolomon/donate**
