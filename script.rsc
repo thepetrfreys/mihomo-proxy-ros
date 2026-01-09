@@ -609,10 +609,12 @@ add interval=10s name=DNSchange on-event=changeDNS
 :put "For donate:"
 :put "- USDT(TRC20):TWDDYD1nk5JnG6FxvEu2fyFqMCY9PcdEsJ"
 :put "- https://boosty.to/petersolomon/donate"
+:put "Invite link Telegram-group https://t.me/+96HVPF3Ww6o3YTNi"
 :log warning "script complete, enjoy!"
 :log warning "For use WG,AWG pls push conf files on Mikrotik to path /awg_conf/"
 :log warning "Webpanel UI http://192.168.255.2:9090/ui/"
 :log warning "For donate:"
 :log warning "- USDT(TRC20):TWDDYD1nk5JnG6FxvEu2fyFqMCY9PcdEsJ"
 :log warning "- https://boosty.to/petersolomon/donate"
+:log "Invite link Telegram-group https://t.me/+96HVPF3Ww6o3YTNi"
 }
