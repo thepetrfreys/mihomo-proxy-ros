@@ -51,7 +51,7 @@ and provides a **flexible, ready-to-use proxy solution**.
 
 ---
 
-After installation, you can **flexibly configure resource routing** on the router itself by modifying the resources in the existing script or creating new ones ([DNS_FWD](https://github.com/Medium1992/MikroTik_DNS_FWD), [IPList](https://github.com/Medium1992/MikroTik_IPlist)),  
+After installation, you can **flexibly configure resource routing** on the router itself by modifying the resources in the existing script or creating new ones ([DNS_FWD](https://github.com/thepetrfreys/MikroTik_DNS_FWD), [IPList](https://github.com/thepetrfreys/MikroTik_IPlist)),  
 as well as **adding new links** and other parameters via environment variables (`ENV`) for flexible routing and container logic configuration of `mihomo-proxy-ros`.
 
 ## 🌟 ENVs Description
@@ -161,11 +161,11 @@ then the script **automatically downloads** from the repository and **starts ins
 }
 :if ($currentMinor >= 21) do={
 :put "Current version RouterOS 7.$currentMinor"
-:set r [/tool fetch url=https://raw.githubusercontent.com/Medium1992/mihomo-proxy-ros/refs/heads/main/script21.rsc mode=https output=user as-value]
+:set r [/tool fetch url=https://raw.githubusercontent.com/thepetrfreys/mihomo-proxy-ros/refs/heads/main/script21.rsc mode=https output=user as-value]
 }
 :if ($currentMinor = 20) do={
 :put "Current version RouterOS 7.$currentMinor"
-:set r [/tool fetch url=https://raw.githubusercontent.com/Medium1992/mihomo-proxy-ros/refs/heads/main/script.rsc mode=https output=user as-value]
+:set r [/tool fetch url=https://raw.githubusercontent.com/thepetrfreys/mihomo-proxy-ros/refs/heads/main/script.rsc mode=https output=user as-value]
 }
 :if ($currentMinor < 20) do={
 :put "Current version RouterOS $currentVersion"
@@ -186,7 +186,7 @@ $s
 ```
 ### Docker compose example
 
-[Docker](https://github.com/Medium1992/mihomo-proxy-ros/blob/main/docker-compose.yml)
+[Docker](https://github.com/thepetrfreys/mihomo-proxy-ros/blob/main/docker-compose.yml)
 
 ## 💖 Project Support
 
