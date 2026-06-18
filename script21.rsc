@@ -84,7 +84,7 @@ foreach i in=$slotArray do={
 :put "interface list WAN added, pls add interface to interface list WAN and press Enter to continue"
 :set start [/terminal ask]
 }
-:if ([:len [/interface/list/find name=WWLAN]] = 0) do={
+:if ([:len [/interface/list/find name=WLAN]] = 0) do={
 /interface/list/add name=WLAN
 :put "interface list WLAN added, pls add interface to interface list WLAN and press Enter to continue"
 :set start [/terminal ask]
@@ -246,10 +246,13 @@ set [find where key=SUB_LINK1 list=MihomoProxyRoS] value=$inputSUBLINK
 }
 
 :if ([:len [/ip/route/find comment="MihomoProxyRoS1"]] = 0) do={
-/ip/route/add dst-address=198.18.0.0/15 gateway=192.168.255.2 comment="MihomoProxyRoS1"
-:put "Add ip route FakeIP"}
+/ip/route/add dst-address=198.18.0.0/15 gateway=192.168.255.2 routing-table=MihomoProxyRoS comment="MihomoProxyRoS1"
+:put "Add ip route FakeIP into routing table MihomoProxyRoS"}
 
 /ip/firewall/address-list
+:do {add address=198.18.0.0/15 list=MihomoProxyRoS comment="FakeIP"
+:put "Add FakeIP range to address list MihomoProxyRoS"} on-error {}
+
 :do {
 add address=1.1.1.1 list=DNS
 add address=9.9.9.9 list=DNS

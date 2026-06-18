@@ -236,10 +236,13 @@ set [find where key=SUB_LINK1 list=MihomoProxyRoS] value=$inputSUBLINK
 }
 
 :if ([:len [/ip/route/find comment="MihomoProxyRoS1"]] = 0) do={
-/ip/route/add dst-address=198.18.0.0/15 gateway=192.168.255.2 comment="MihomoProxyRoS1"
-:put "Add ip route FakeIP"}
+/ip/route/add dst-address=198.18.0.0/15 gateway=192.168.255.2 routing-table=MihomoProxyRoS comment="MihomoProxyRoS1"
+:put "Add ip route FakeIP into routing table MihomoProxyRoS"}
 
 /ip/firewall/address-list
+:do {add address=198.18.0.0/15 list=MihomoProxyRoS comment="FakeIP"
+:put "Add FakeIP range to address list MihomoProxyRoS"} on-error {}
+
 :do {
 add address=1.1.1.1 list=DNS
 add address=9.9.9.9 list=DNS
